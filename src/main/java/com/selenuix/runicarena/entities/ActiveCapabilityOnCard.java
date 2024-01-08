@@ -1,9 +1,6 @@
 package com.selenuix.runicarena.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class ActiveCapabilityOnCard {
@@ -12,5 +9,16 @@ public class ActiveCapabilityOnCard {
     private Integer id;
 
     private Integer cardId;
-    private Integer activeCapabilityId;
+
+    @ManyToOne
+    private ActiveCapability activeCapability;
+
+    public ActiveCapability getActiveCapability() {
+        return activeCapability;
+    }
+
+    public void setActiveCapability(ActiveCapability activeCapability) {
+        this.activeCapability = activeCapability;
+    }
+
 }

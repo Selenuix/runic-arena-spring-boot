@@ -1,12 +1,19 @@
 package com.selenuix.runicarena.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 
 import java.util.List;
 
 @Entity
-public class ActiveCapability extends PassiveCapability {
+public class ActiveCapability {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+
+    private String name;
+
+    private String description;
+
     private String type;
 
     @OneToMany(mappedBy = "activeCapability")

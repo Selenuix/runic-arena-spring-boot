@@ -71,4 +71,28 @@ public class Card {
     public void setType(Type type) {
         this.type = type;
     }
+
+    public CardClass getCardClass() {
+        return cardClass;
+    }
+
+    public void setCardClass(CardClass cardClass) {
+        this.cardClass = cardClass;
+    }
+
+    public PassiveCapability getPassiveCapability() {
+        return passiveCapability;
+    }
+
+    public void setPassiveCapability(PassiveCapability passiveCapability) {
+        this.passiveCapability = passiveCapability;
+    }
+
+    public ActiveCapability getActiveCapability() {
+        return activeCapability;
+    }
+
+    public void setActiveCapability(ActiveCapability activeCapability) {
+        this.activeCapability = activeCapability;
+    }
 }
